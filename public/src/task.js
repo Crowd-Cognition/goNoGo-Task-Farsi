@@ -23,12 +23,12 @@ timeline.push(first_welcome_page);
 timeline.push(instructions);
 
 //  instruction Questions
-// timeline.push(instruction_questions);
+timeline.push(instruction_questions);
 
-// timeline.push(instruction_question_feedback);
+timeline.push(instruction_question_feedback);
 
 // instructuon Questions
-// timeline.push(instructions_repeat);
+timeline.push(instructions_repeat);
 
 // practice code
 timeline.push(practice_instruction);
@@ -114,8 +114,8 @@ jsPsych.init({
     else if(exp_status == 'not_completed_by_failing_quiz') {
       console.log("vared if fail shod")
       var goodbye_message = "<h1 style= 'font-size:100px;'><strong> ⚠️ </strong></h1>" + 
-      "<h3 style= 'font-size:xx-large; color:crimson'>Due to not passing the quiz, your session has expired!</h3>" +
-      "<p style= 'font-size:large;'>Unfortunately, because of this you can't continue the experiment and we would not be able you pay you.</p>" ;
+      "<h3 style= 'font-size:xx-large; color:crimson'> به دلیل دو بار پیاپی موفق نشدن در کوییز، نوبت آزمایش شما به پایان رسیده است! <br>(لطفا این موضوع را با مسئول آزمایش در میان بگذارید.)</h3></p>" ;
+      // "<p style= 'font-size:large;'>Unfortunately, because of this you can't continue the experiment and we would not be able you pay you.</p>" ;
 		jsPsych.getDisplayElement().innerHTML = goodbye_message;
 
     }
@@ -123,8 +123,8 @@ jsPsych.init({
     if(is_expired_by_changing_tab){
       console.log("vared if change tab shod")
       var goodbye_message = "<h1 style= 'font-size:100px;'><strong> ⚠️ </strong></h1>" + 
-      "<h3 style= 'font-size:xx-large; color:crimson'>Due to changing tab/window, your session has expired!</h3>" +
-      "<p style= 'font-size:large;'>Unfortunately, because of this you can't continue the experiment and we would not be able you pay you.</p>" ;
+      "<h3 style= 'font-size:xx-large; color:crimson'>Due to changing tab/window, your session has expired!</h3></p>" ;
+      // "<p style= 'font-size:large;'>Unfortunately, because of this you can't continue the experiment and we would not be able you pay you.</p>" ;
 
       jsPsych.getDisplayElement().innerHTML = goodbye_message;
 

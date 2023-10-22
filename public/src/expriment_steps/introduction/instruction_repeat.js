@@ -4,70 +4,90 @@ var repeat_counts = 0;
 
 var instructions_texts = {
 	welcome_page : 
-		"<h2 class= 'instruction' style = 'font-size: xx-large'> <b>let's learn how the game works!</b>  &#127891; </h2><p> Click the <q>Next</q> button to continue.</p>",
+		"<h2 class= 'instruction' style = 'font-size: xx-large' dir='rtl' > <b>بیایید یاد بگیریم که چطور بازی رو انجام بدیم.</b>  &#127891; </h2><p dir='rtl' > برای ادامه گزینه‌ی 'NEXT' را انتخاب کنید.	</p>",
   
 	second_page : 
-		"<div class= 'instruction'> <p>The game consists of individual trials in which you decide whether you do a simple task or not: "+
-    "indicate with a button press on which side of the screen you see a black circle. </p>" + 
-    "<p>Before the circle appears on the screen you will see one image that tells you</p>"+
-    "<ol> <li> if you have to do this button-press or not </li> <li>if you may win or lose money on the trial.</li></ol>  </div>" 
+		"<div class= 'instruction' dir='rtl'> <p>در ابتدا باید بگیم که شما قراره این بازی را به 2 شکل انجام بدید:</p> "+
+    " <p> بار به‌صورت<b> تکی</b>  و 1 بار در قالب <b>یک گروه 2 نفره.</b> </p>" + 
+    "<p>پس ازتون ممنون می‌شیم با توجه به این‌که الان دارید بازی رو تکی انجام می‌دید یا گروهی، حتما 10 روز بعد برای انجام اون شکل دیگه‌ی بازی در آزمایشگاه حاضر شوید.  </p>"+
+    " </div>" 
 	// + "<img src='../img/page1.png' width='70%' height='70%'>"
 	,
+	  
+	third_page : 
+	"<div class= 'instruction' dir='rtl'> <p>بازی شامل 3 بلوک است و شما در هر بلوک 40 دور تکلیف خود را انجام می‌دهید. </p> "+
+	" <p>در شروع هر دور به‌صورت تصادفی یک  <u>نشانه‌ها‌ی تصویری</u> می‌بینید و با توجه به آن باید تصمیم بگیرید که در ادامه این دور <u>کاری بکنید</u> یا <u>کاری نکنید</u>.</p>"+
+	"<p> به‌عبارت دیگر اگر تصمیمتان این بود که کاری بکنید با فشار دادن کلید مناسب از روی کی‌بورد محل <b>دایره مشکی</b> را گزارش کنید. </p> </div>" +
+    "  <img src='../img/New_inst_images/page3.jpg' width='100%' height='100%'>",
+
+	forth_page : 
+	"<div class= 'instruction' dir='rtl'> <p> در این بازی 4 نشانه‌ی تصویری متفاوت وجود دارد. </p> "+
+	"<p>شما باید با آزمون و خطا پیدا کنید بهترین استراتژی برای هر نشانه‌ی تصویری کدام است.</p>" +
+	"<p>در واقع این‌جا تصمیم می‌گیرید که در مرحله‌ی بعد کاری بکنید یا کاری نکنید.</p>" +
+	"</div>"+
+	"<p>این‌ یک نمونه از تصویری است که ممکن است </p>" +
+	"<img src = '../img/eighth_3_page.png' width='30%' height='30%'>",
+
+	fifth_page : 
+	"<img src='../img/New_inst_images/page5.jpg' width='100%' height='100%'>",
                  
 	sixth_page : 
-		"<div class= 'instruction'> <p>There are 4 types of images. One of them will appear at the beginning of each trial.</p> "+
-		" <p>Depending on what image you see, by trial and error you must find out what is best to do (<u>to press a button</u> or <u>not to press it</u>) when you see the circle. </p>"+
-		"<p>By finding out what to do for each image, you will increase your chance of winning and decrease the chance of losing. </p> </div>" + 
-  	"<img src='../img/page2.png' width='70%' height='70%'>",
+		"<div class= 'instruction' dir='rtl'> <p>حالا بیایید کمی دقیق‌تر شویم. </p> "+
+		" <p>در هر دور ابتدا یک تصویر فرکتال خواهید دید. در این لحظه نیازی نیست کاری بکنید. </p>"+
+		"<p> وقتی یاد می‌گیرید که برای هر تصویر کدام تصمیم بهتر است، که شانس برنده شدن خودتان را زیاد و شانس باختن خودتان را کم می‌کنید.</p> </div>" + 
+		"<p dir='rtl'>این‌ یک نمونه از تصویری است که ممکن است ببینید:</p>"+
+  	"<img src='../img/stim/f2_1.png' width='25%' height='25%'>",
   
 	seventh_page : 
-		"<div class= 'instruction'><p>Some of the images predict that you will <u>win</u> some money or <u>get nothing</u>.<br>Other images predict that you will <u>lose</u> some money or <u>lose nothing</u>.</p>"+
-		"<p> Winning or Losing money is probabilistic, but by figuring out the best strategy for each image, you can optimize the probability of getting the better outcome. For example, losing nothing is better than losing some money. </p>"+
-		"<p>For some images, the best strategy is to <u>press the button</u>. For some other images, the best strategy is to <u>withhold from responding</u>.</p></div>",
+		"<div class= 'instruction' dir='rtl'><p>بعد از مکثی کوتاه، یک دایره‌ی مشکی خواهید دید که به صورت تصادفی سمت راست یا چپ یک مستطیل قرمز نمایش داده می‌شود.</p>"+
+		"<p> با توجه به این‌که در مرحله قبل چه تصویری دیده باشید، این‌جا تصمیمتان را اجرا خواهید کر</p>"+
+		"<p>به عبارت دیگر، برای مشخص کردن سمت دایره کلید چپ یا راست را فشار می‌دهید یا هیچ کاری نمی‌کنید.</p>"+
+		"<p>برای انتخاب سمت چپ کلیدF  و برای انتخاب سمت راست از کلیدJ  باید استفاده کند.</p>"+
+		"<p>اگر می‌خواهید کاری انجام دهید، ۱ ثانیه زمان دارید تا تصمیم خود را عملی کنید. اگر در این ۱ ثانیه کاری نکنید، تصور بر این است که شما از پاسخ دادن خودداری کرده اید.</p>"+
+		"</div>"+
+		"<img src='../img/New_inst_images/page7.jpg' width='40%' height='40%'>",
+	eighth_page : 
+		"<div class= 'instruction' dir='rtl'> <p>بعد از یک مکث کوتاه، یکی از سه نتیجه‌ی زیر را خواهید دید:</p> </div>"+
+    // "<p> برای  نتیجه‌های مربوط به باختن ممکن است نمادهای &#10060;&#128184;&#10060; یا  &#x2796; را دریافت کنید. </p>"+
+    // "<p> با انجام کار درست در هنگام ظاهر شدن دایره (یا کلید را فشار دادن یا از پاسخ دادن خودداری کردن) می توانید مطلوب‌ترین نتیجه را به دفعات به‌دست بیاورید .</p></div>" + 
+
+    "<table style='margin-left:auto;margin-right:auto;table-layout:fixed !important; width:650px;border-spacing:3em;' dir='rtl'><tr>" +
+    "<td> برد</td> <td style='font-size:30px;'> &#9989;&#128176;&#9989; </td>" +
+    "</tr><tr>" +
+    "<td>باخت</td> <td style='font-size:30px;'> &#10060;&#128184;&#10060; </td>" +
+	"</tr><tr>" +
+    "<td s>صفر</td> <td style='font-size:30px;'> &#x2796; </td>" +
+    "</tr></table>",
   
 	ninth_page : 
-		"<div class= 'instruction' style= 'text-align: center'><p><b>The meaning of each image will be constant throughout the game. </b></p> " +
-		"<p> <b>However, the game is not easy, so we encourage exploration of all options.</b></p> </div>",
-	ninth_p_page : 
-	"<div class= 'instruction' style= 'text-align: center'><p><b>Please note that there is <u>no relation</u>  between the location of  circles and images.</b></p> </div>",
-  
-	third_page : 
-		"<div class= 'instruction'><p> At the beginning of each trial you will see one image. You must not press any button at this point. </p> <p> Here, you must <u>DECIDE</u> if you will <u>press a button</u> or <u>withhold your response</u> in the next stage.</p></div> "+
-    " <p> Here is an example of the type of image you will see.</p> <img src='../img/stim/f3_1.png' width='30%' height='30%'>",
-  
-	forth_page : 
-		"<div class= 'instruction'> <p> After a short delay, you will see a circle on one side of the red rectangle is on the center of the screen.</p> "+
-    "<p>Depending on what image you saw earlier, here, you execute your plan by either <u>pressing a button</u> (to indicate the circle side) or <u>withhold your response</u>. </p></div>" + 
-    "<img src = '../img/eighth_3_page.png' width='30%' height='30%'>",
-  
-	fifth_page : 
-	"<p class= 'instruction'>  After a short delay, you will see one of three outcomes </p>" +
-		
-	"<table style='margin-left:auto;margin-right:auto;table-layout:fixed !important; width:650px;border-spacing:3em;'><tr>" +
-	"<td style='font-size:40px;'>&#9989;&#128176;&#9989;</td> "+"<td> Win </td>" +
-	"</tr><tr>" +
-	"<td style='font-size:40px;'>&#10060;&#128184;&#10060;</td>"+"<td> Lose </td>" +
-	"</tr><tr>" +
-	"<td style='font-size:60px;'>&#x2796;</td>"+"<td> Neither win nor lose</td>" +
-	"</tr></table>",
-  
+		"<img src='../img/New_inst_images/page9.jpg' width='80%' height='80%'>",
+	
+		ninth_p_page : 
+	"<div class= 'instruction' dir='rtl'><p >نتیجه هر دور ( برنده یا بازنده شدن) احتمالاتی است یعنی ممکن است علیرغم تصمیم درست ضرر کنید. </p> " +
+	"<p>اما با پیدا کردن بهترین استراتژی برای هر تصویر، می‌توانید احتمال دریافت نتیجه‌ی بهتر را بهینه کنید.</p>" +
+	"<p>دقت کنید که برای بعضی از تصاویر استراتژی بهتر «کاری کردن» است و برای برخی دیگر بهترین استراتژی این است که «کاری نکنیم».</p>" +
+	"<p>هدف شما در این بازی پیدا کردن و اجرای این استراتژی‌هاست.</p> </div>", 
+
 	tenth_page :  
-		"<div class= 'instruction'> <p> <b>Remember that, in this task, the outcome is probabilistic.</b></p> "+ 
-    "<p> <b> This means that, sometimes even if you know the best strategy, you may still not win, or you may still end up losing.</b> </p>" +
-    "<p>  However, remember that for each image there is one best strategy (either <u>Press a Button</u> or <u>Withhold Response</u>) that is more advantageous than the other. <p></div>",
+		"<div class= 'instruction' dir='rtl'> <p> <b>به نکاتی که در ادامه گفته می‌شود توجه کنید: </b></p> </div>"
+    // "<p> <b> یعنی گاهی حتی اگر بهترین استراتژی را بدانید، ممکن است باز هم برنده نشوید، یا بازنده شوید.	</b> </p>" +
+    // "<p>  با این حال، به یاد داشته باشید که برای هر تصویر یک استراتژی بهتر (یا فشار دادن یک کلید یا خودداری از پاسخ) وجود دارد که از دیگری بهتر است. <p></div>"
+	,
   
-	eighth_page : 
-		"<div class= 'instruction'> <p>So for the winning conditions you may either get &#9989;&#128176;&#9989; or &#x2796;</p> "+
-    "<p> For the losing condition you may either get &#x2796; or &#10060;&#128184;&#10060; </p>"+
-    "<p> By doing the right thing when the circle appears (either <u>Press a Button</u> or <u>Withhold Response</u>) you can make the most favorable outcome more frequent.  </p></div>" + 
-    "<table style='margin-left:auto;margin-right:auto;table-layout:fixed !important; width:650px;border-spacing:3em;'><tr>" +
-    "<td>Winning Condition</td> "+ "<td style='font-size:30px;'> &#9989;&#128176;&#9989; or &#x2796;</td>" +
-    "</tr><tr>" +
-    "<td s>Losing Condtion</td>" + "<td style='font-size:30px;'>&#x2796; or &#10060;&#128184;&#10060;</td>" +
-    "</tr></table>",
-	eleventh_page : "<p class= 'instruction' >Now, we are going to check whether you've understood the previous instructions by asking some True/False questions." +
-	 "</p>" +
-	 "<p> Click 'Next' to begin the test.</p>"
+  
+	eleventh_page : 
+		"<div class= 'instruction' dir='rtl'> <p>معنای هر تصویر در طول بازی ثابت خواهد بود.</p>"+
+    "<p>این بازی آسان نیست. بنابراین ما شما را به سعی‌ و خطا و پیدا کردن بهترین استراتژی تشویق می‌کنیم.</p></div>",
+
+	twelve_page : 
+	"<div class= 'instruction' dir='rtl'> <p>لطفاً توجه داشته باشید که هیچ ارتباطی بین چپ یا راست آمدن دایره‌ها و تصاویر وجود ندارد.</p>"+
+"</div>",
+
+thirteenth_page : 
+"<div class= 'instruction' dir='rtl'> <p>قبل از شروع بازی اصلی، برای تمرین و آشنا شدن با شرایط، ۱۲ دور به صورت تمرینی بازی را انجام خواهید داد.</p>"+
+"<p>پس از آن بازی اصلی که به ۳ بلوک تقسیم شده، شروع می‌شود. می توانید بین هر بلوک ۱ دقیقه استراحت کنید.</p>"+
+"<p>در پایان آزمایش برای بازی گروهی که انجام دادید مبلغ۴۰۰ هزار تومان به‌عنوان پاداش ثابت دریافت خواهید کرد. در ضمن مجموع امتیازهای شما شمرده می شود و به ازای امتیازی که در بازی به دست آورده‌اید تا سقف ۲۰۰ هزار تومان به پاداش ثابت شما اضافه می‌شود.</p>"+
+"</div>",
 
 };
 	
@@ -86,18 +106,17 @@ var instructions = {
 		instructions_texts.ninth_page,
 		instructions_texts.ninth_p_page,
 		instructions_texts.tenth_page,
-		instructions_texts.eleventh_page
+		instructions_texts.eleventh_page,
+		instructions_texts.twelve_page,
+		instructions_texts.thirteenth_page
+
 	],
 	show_clickable_nav: true,
-	show_page_number: true,
-	show_progress_bar: false,
+
 	data: {},
-	on_load: function() {
-		document.getElementById("jspsych-progressbar-container").style.visibility = "visible";
-	},
 	on_finish: function(data) {
+
 		jsPsych.data.addDataToLastTrial({
-			
 			exp_stage:"instructions",
 			exp_part: "instructions"
 		})
@@ -114,13 +133,13 @@ var instruction_questions = {
   questions: [
     {
       prompt:
-        "<p style='text-align: left'>For some images, the best strategy is always to press the right arrow key. For some other images, the best strategy is always to press the left arrow key.</p>",
+        "<p style='text-align: right' dir='rtl'>برای برخی از تصاویر، بهترین استراتژی همیشه فشار دادن کلید J است. برای برخی از تصاویر دیگر، بهترین استراتژی همیشه فشار دادن کلید F است.</p>",
       options: ["True", "False"],
       horizontal: true,
     },
     {
       prompt:
-        "<p style='text-align: left'>I either press the left or right arrow on my keyboard (to indicate my choice) or press nothing.</p>",
+        "<p style='text-align: right' dir='rtl'>برای نشان دادن تصمیمم دکمه‌های F یا J را روی صفحه کلید فشار می دهم یا چیزی را فشار نمی دهم.</p>",
       options: ["True", "False"],
       horizontal: true,
     },
@@ -132,7 +151,7 @@ var instruction_questions = {
     // },
     {
       prompt:
-        "<p style='text-align: left'>The game contains two different images.</p>",
+        "<p style='text-align: right' dir='rtl'>بازی فقط شامل 2 تصویر متفاوت است.</p>",
       options: ["True", "False"],
       horizontal: true,
     },
@@ -193,13 +212,13 @@ var instruction_question_feedback = {
 	pages: function () {
 	  if (score < 3) {
 		return [ "<p style='font-size:150px;'>&#9888;&#65039;</p>" +
-		  "<div class= 'instruction'> You got " +score + "/3 correct. it looks as if you may not fully understand the task." +
-		  "<p><strong style='color:crimson'>Please note that if you are unable to answer the questions correctly <u style='color:red'>AGAIN</u>, we will not be able to pay you. </strong> </p>" +
-		  "</div>" + "<p> Please click 'Next' to return to the instructions.</p>"
+        "<div class= 'instruction' dir='rtl'>شما "+ score+"از  ۳ سوال را درست زدید. لطفا با کلیک بر روی  'NEXT' دوباره آموزش را بگذرانید."  +
+        "<p><strong style='color:crimson'>در نظر داشته باشید که اگر برای بار دوم در این کوییز موفق نشوید نمی‌توانید به آزمایش ادامه دهید. </p>" +
+        "</div>"
   
 		];
 	  } else {
-		return ["<h1 class= 'instruction'>Great! You got them all right! </h1> <p>Click 'Next' to proceed.</p>"];
+		return ["<h1 class= 'instruction'>!عالی! همه پاسخ‌ها درست بود </h1> <p>را کلیک کنید 'Next'</p>"];
 	  }
 	},
 	show_clickable_nav: true,

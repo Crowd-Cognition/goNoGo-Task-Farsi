@@ -8,22 +8,22 @@ var instruction_questions = {
   questions: [
     {
       prompt:
-        "<p style='text-align: left'>For some images, the best strategy is always to press the right arrow key. For some other images, the best strategy is always to press the left arrow key.</p>",
+        "<p style='text-align: right' dir='rtl'>برای برخی از تصاویر، بهترین استراتژی همیشه فشار دادن کلید J است. برای برخی از تصاویر دیگر، بهترین استراتژی همیشه فشار دادن کلید F است.</p>",
       options: ["True", "False"],
       horizontal: true,
     },
     {
       prompt:
-        "<p style='text-align: left'>I either press the left or right arrow on my keyboard (to indicate my choice) or press nothing.</p>",
+        "<p style='text-align: right' dir='rtl'>برای نشان دادن تصمیمم دکمه‌های F یا J را روی صفحه کلید فشار می دهم یا چیزی را فشار نمی دهم.</p>",
       options: ["True", "False"],
       horizontal: true,
     },
-    // {
-    //   prompt:
-    //     "<p style='text-align: left'>The game contains two different images.</p>",
-    //   options: ["True", "False"],
-    //   horizontal: true,
-    // },
+    {
+      prompt:
+        "<p style='text-align: right' dir='rtl'>.بازی فقط شامل 2 تصویر متفاوت است</p>",
+      options: ["True", "False"],
+      horizontal: true,
+    },
   ],
   required: true,
   data: {},

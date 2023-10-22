@@ -4,13 +4,13 @@ var instruction_question_feedback = {
   pages: function () {
     if (score < 3) {
       return [ "<p style='font-size:150px;'>&#9888;&#65039;</p>" +
-        "<div class= 'instruction'> You got " +score + "/3 correct. it looks as if you may not fully understand the task." +
-        "<p><strong style='color:crimson'>Please note that if you are unable to answer the questions correctly <u style='color:red'>AGAIN</u>, we will not be able to pay you. </strong> </p>" +
-        "</div>" + "<p> Please click 'Next' to return to the instructions.</p>"
+        "<div class= 'instruction'>شما"+ score+"از ۳ سوال را درست زدید. لطفا با کلیک بر روی 'NEXT' دوباره آموزش را بگذرانید."  +
+        "<p><strong style='color:crimson'>در نظر داشته باشید که اگر برای بار دوم در این کوییز موفق نشوید نمی‌توانید به آزمایش ادامه دهید. </p>" +
+        "</div>"
 
       ];
     } else {
-      return ["<h1 class= 'instruction'>Great! You got them all right! </h1> <p>Click 'Next' to proceed.</p>"];
+      return ["<h1 class= 'instruction'>عالی! همه پاسخ‌ها درست بود! </h1> <p>را کلیک کنید.'Next'</p>"];
     }
   },
   show_clickable_nav: true,

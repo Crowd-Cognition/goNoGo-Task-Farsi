@@ -7,8 +7,8 @@ function main_between_block(percent) {
 
 			return ["<p class= 'instruction'> You have completed " + percent + " of the task" + 
 			//  "and earned <b>"+ rounded_bonus + "</b> bonus points in total!</p>"+
-							"<br>Feel free to take a few seconds to break. This will time out after 1 minute.</p>"+
-							"<p>Click any key to continue.</p>"];
+							"<br>از الان تا ۱ دقیقه زمان استراحت دارید. بعد از ۱ دقیقه بازی به طور خودکار ادامه پیدا می‌کنید.</p>"+
+							"<p>برای ادامه می‌توانید هر کلیدی را فشار دهید.</p>"];
 		},
 		data: {},
 		trial_duration: 60000,
