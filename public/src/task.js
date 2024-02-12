@@ -40,7 +40,7 @@ timeline.push(practice_trial_end);
 // // main code
 timeline.push(main_start_page);
 
-main_squares = shuffler(["f4_1", "f4_2", "f4_3", "f4_4"]);
+main_squares = shuffler(["f3_1", "f3_2", "f3_3", "f3_4"]);
 
 stim1 = make_stimuli(false, main_squares, "block_1");
 stim2 = make_stimuli(false, main_squares, "block_2");

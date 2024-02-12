@@ -73,7 +73,17 @@ var main_target_detection_task = {
     }
 
     if(data.cond_action == 'go'){
-      data.correct = (data.response == data.side)
+      if (data.response == 'k' || data.response == 'j'){
+        data.correct = ( 'arrowright' == data.side)
+      }
+      else if (data.response == 'd' || data.response == 'f') {
+        data.correct = ( 'arrowleft' == data.side)
+      }
+      else 
+      {
+        data.correct = false
+      }
+      
     } else if (data.cond_action == 'nogo') {
       data.correct = (data.response == null)
     }

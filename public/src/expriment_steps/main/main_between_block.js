@@ -47,6 +47,7 @@ function main_between_block(percent) {
 			}
 			data.block = curr_block // defines as this block after the filtering to determine num gos
 			data.exp_part = 'main'
+			jsPsych.data.get().localSave('csv','data_pilot_groupavlovian_BLOCK' + String(curr_block) +'.csv');
 
 			jsPsych.data.addDataToLastTrial({
 				exp_stage:"between_block",
